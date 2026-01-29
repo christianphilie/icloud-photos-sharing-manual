@@ -29,8 +29,8 @@ export function getSteps(): Step[] {
       return [];
     }
     
-    cachedSteps = data.steps
-      .map((step) => {
+    const processedSteps = data.steps
+      .map((step): Step | null => {
         // Validiere, dass number und title vorhanden sind
         if (!step.number || !step.title) {
           console.warn('Step ohne number oder title gefunden:', step);
@@ -47,6 +47,8 @@ export function getSteps(): Step[] {
       })
       .filter((step): step is Step => step !== null)
       .sort((a, b) => a.number - b.number); // Sortiere nach Nummer
+    
+    cachedSteps = processedSteps;
     
     return cachedSteps;
   } catch (error) {
