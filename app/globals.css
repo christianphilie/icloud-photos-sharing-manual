@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
+  /* Light Mode Colors */
   --background: #ffffff;
+  --surface: #fafafa;
   --foreground: #171717;
+  --foreground-secondary: #737373;
+  --border: #e5e5e5;
+  --accent: #3b82f6;
+
+  /* Dark Mode Colors */
+  --background-dark: #0a0a0a;
+  --surface-dark: #171717;
+  --foreground-dark: #ededed;
+  --foreground-secondary-dark: #a3a3a3;
+  --border-dark: #262626;
+  --accent-dark: #60a5fa;
+}
+
+/* Dark Mode Colors */
+
+/* System Preference (Fallback, works even without JS) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--background-dark);
+    --surface: var(--surface-dark);
+    --foreground: var(--foreground-dark);
+    --foreground-secondary: var(--foreground-secondary-dark);
+    --border: var(--border-dark);
+    --accent: var(--accent-dark);
+  }
+}
+
+/* Manual Toggle via next-themes */
+.dark {
+  --background: var(--background-dark);
+  --surface: var(--surface-dark);
+  --foreground: var(--foreground-dark);
+  --foreground-secondary: var(--foreground-secondary-dark);
+  --border: var(--border-dark);
+  --accent: var(--accent-dark);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* Transitions */
+  --transition-base: 150ms ease-in-out;
+  --transition-slow: 200ms ease-in-out;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Smooth Transitions for Theme Change */
+* {
+  transition-property: background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
 }
