@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import { Card } from './ui/Card';
 import { ExpandableDetail } from './ExpandableDetail';
+import { Markdown } from './Markdown';
 
 interface Step {
   number: number;
   title: string;
-  description: string;
+  description: string; // Markdown-String
   screenshot?: string; // Pfad zum Screenshot (z.B. "/screenshots/step-1.png")
-  details?: string; // Optional: Ausklappbare Details
+  details?: string; // Optional: Ausklappbare Details (Markdown-String)
 }
 
 interface StepGuideProps {
@@ -30,9 +31,10 @@ export function StepGuide({ steps }: StepGuideProps) {
                 {step.title}
               </h3>
               
-              <p className="text-foreground-secondary mb-4">
-                {step.description}
-              </p>
+              {/* Beschreibung als Markdown */}
+              <div className="mb-4">
+                <Markdown>{step.description}</Markdown>
+              </div>
               
               {/* Screenshot */}
               {step.screenshot && (
@@ -47,10 +49,10 @@ export function StepGuide({ steps }: StepGuideProps) {
                 </div>
               )}
               
-              {/* Ausklappbare Details */}
+              {/* Ausklappbare Details als Markdown */}
               {step.details && (
                 <ExpandableDetail>
-                  {step.details}
+                  <Markdown>{step.details}</Markdown>
                 </ExpandableDetail>
               )}
             </div>

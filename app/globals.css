@@ -72,7 +72,7 @@ body {
 
 /* Smooth Transitions for Theme Change */
 * {
-  transition-property: background-color, border-color;
+  transition-property: background-color, border-color, color;
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
 }

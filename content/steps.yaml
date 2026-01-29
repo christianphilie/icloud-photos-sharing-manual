@@ -1,0 +1,56 @@
+steps:
+  - number: 1
+    title: "Fotos-App öffnen"
+    description: |
+      Öffne die **Fotos-App** auf deinem iPhone.
+    details: |
+      Die Fotos-App findest du auf deinem Home-Bildschirm. Sie zeigt alle deine Fotos und Videos.
+
+      Falls du die App nicht findest, kannst du auch über die Suche danach suchen.
+
+  - number: 2
+    title: "Auswählen-Modus aktivieren"
+    description: |
+      Tippe oben rechts auf **"Auswählen"**, um den Auswahlmodus zu aktivieren.
+    details: |
+      Der "Auswählen"-Button befindet sich oben rechts in der Fotos-App. Nach dem Tippen kannst du mehrere Fotos gleichzeitig auswählen.
+
+  - number: 3
+    title: "Fotos auswählen"
+    description: |
+      Tippe auf die **Fotos**, die du teilen möchtest. Du kannst mehrere Fotos gleichzeitig auswählen.
+    details: |
+      - Jedes ausgewählte Foto wird mit einem blauen Häkchen markiert
+      - Du kannst die Auswahl jederzeit ändern, indem du erneut auf ein Foto tippst
+      - Wähle alle Fotos aus, die du teilen möchtest
+      - Die Anzahl der ausgewählten Fotos wird oben angezeigt
+
+  - number: 4
+    title: "Teilen-Button drücken"
+    description: |
+      Tippe auf den **Teilen-Button** (Quadrat mit Pfeil nach oben) unten links.
+    details: |
+      Der Teilen-Button befindet sich unten links in der Fotos-App. Er zeigt ein Quadrat mit einem Pfeil nach oben und wird aktiv, sobald du mindestens ein Foto ausgewählt hast.
+
+  - number: 5
+    title: "Share iCloud Link auswählen"
+    description: |
+      Scrolle im Teilen-Menü nach unten und tippe auf **"Share iCloud Link"**.
+    details: |
+      - Die Option "Share iCloud Link" befindet sich weiter unten im Teilen-Menü
+      - Du musst möglicherweise nach unten scrollen, um sie zu finden
+      - Diese Option erstellt einen Link, der die Fotos in **voller Qualität** teilt
+      - Der Link wird automatisch in deine Zwischenablage kopiert
+      - **Wichtig:** Der Link ist 30 Tage lang gültig und läuft danach automatisch ab
+
+  - number: 6
+    title: "Link senden"
+    description: |
+      Öffne WhatsApp, E-Mail oder eine andere Nachrichten-App und füge den Link ein.
+    details: |
+      - Der Link ist jetzt in deiner Zwischenablage
+      - Öffne die App, über die du den Link senden möchtest (z.B. WhatsApp, E-Mail, Messages)
+      - Tippe lange auf das Textfeld und wähle **"Einfügen"**
+      - Oder tippe einfach doppelt auf das Textfeld und wähle "Einfügen"
+      - Der Empfänger kann die Fotos dann in voller Qualität ansehen und herunterladen
+      - **Kein Apple Account nötig:** Der Empfänger braucht keinen Apple Account, um die Fotos zu sehen
