@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iCloud Fotos teilen - Anleitung
 
-## Getting Started
+Eine moderne, mehrsprachige Website mit Schritt-für-Schritt-Anleitung zum Teilen von Fotos über iCloud in voller Qualität.
 
-First, run the development server:
+## 🎯 Projektziel
+
+Viele Menschen wissen nicht, wie sie Fotos über iCloud teilen können, ohne Qualitätsverlust. Diese Website bietet eine einfache, visuelle Anleitung mit Screenshots und ausklappbaren Details.
+
+## ✨ Features
+
+- ✅ **Schritt-für-Schritt Anleitung** mit nummerierten Schritten
+- ✅ **Dark Mode** mit automatischer System-Präferenz-Erkennung
+- ✅ **Responsive Design** für Mobile und Desktop
+- ✅ **Markdown-basierte Inhalte** (YAML) - einfach zu editieren
+- ✅ **Ausklappbare Details** für zusätzliche Informationen
+- 🔄 **Mehrsprachigkeit** (DE, EN, ES, FR) - in Planung
+- 🔄 **Vergleichstabelle** iCloud vs. WhatsApp vs. WeTransfer - in Planung
+- 🔄 **Screenshot-Integration** - in Planung
+
+## 🛠️ Tech Stack
+
+- **Next.js 16** (App Router) - React Framework mit SSR/SSG
+- **TypeScript** - Type-Safety
+- **Tailwind CSS 4** - Utility-First CSS Framework
+- **next-themes** - Dark Mode Management
+- **react-markdown** - Markdown Rendering
+- **js-yaml** - YAML Content Parsing
+- **remark-gfm** - GitHub Flavored Markdown Support
+
+## 🚀 Schnellstart
+
+### Voraussetzungen
+
+- Node.js 18+ 
+- npm oder yarn
+
+### Installation
 
 ```bash
+# Repository klonen
+git clone https://github.com/christianphilie/icloud-photos-sharing-manual.git
+cd icloud-photos-sharing-manual
+
+# Dependencies installieren
+npm install
+
+# Development Server starten
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Öffne [http://localhost:3000](http://localhost:3000) im Browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build für Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Projektstruktur
 
-To learn more about Next.js, take a look at the following resources:
+```
+icloud-photos-sharing-manual/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root Layout mit Theme Provider
+│   ├── page.tsx           # Hauptseite
+│   └── globals.css        # Globale Styles & Design System
+├── components/            # React Komponenten
+│   ├── ui/               # Wiederverwendbare UI-Komponenten
+│   │   ├── Card.tsx
+│   │   └── Button.tsx
+│   ├── StepGuide.tsx     # Schritt-für-Schritt Anleitung
+│   ├── ExpandableDetail.tsx
+│   ├── Markdown.tsx      # Markdown Renderer
+│   └── Header.tsx
+├── content/              # Inhalte (YAML)
+│   └── steps.yaml        # Anleitungsschritte
+├── lib/                  # Utilities
+│   └── content.ts        # Content Loading & Caching
+└── public/               # Statische Assets
+    └── screenshots/      # Screenshots (wird hinzugefügt)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Inhalte bearbeiten
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Die Anleitungsschritte werden in `content/steps.yaml` verwaltet. Einfach die YAML-Datei bearbeiten - Markdown wird unterstützt:
 
-## Deploy on Vercel
+```yaml
+steps:
+  - number: 1
+    title: "Schritt Titel"
+    description: |
+      **Fettgedruckter** Text und normale Beschreibung.
+    details: |
+      Ausklappbare Details mit:
+      
+      - Listen
+      - Mehreren Absätzen
+      - **Formatierung**
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗺️ Roadmap
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ Abgeschlossen
+
+- [x] Next.js Projekt Setup
+- [x] Design-System (Tailwind CSS)
+- [x] Dark Mode mit next-themes
+- [x] Basis UI-Komponenten (Card, Button)
+- [x] StepGuide Komponente
+- [x] ExpandableDetail Komponente
+- [x] Markdown-basierte Inhalte (YAML)
+- [x] Content-Loading mit Caching
+- [x] Responsive Design
+
+### 🔄 In Arbeit
+
+- [ ] Screenshots erstellen und integrieren
+- [ ] ComparisonTable Komponente (iCloud vs. WhatsApp vs. WeTransfer)
+- [ ] SEO Meta-Tags optimieren
+- [ ] Accessibility verbessern (ARIA-Labels, Keyboard-Navigation)
+
+### 📋 Geplant
+
+- [ ] Mehrsprachigkeit (next-intl)
+  - [ ] Deutsch (Basis)
+  - [ ] Englisch
+  - [ ] Spanisch
+  - [ ] Französisch
+- [ ] Screenshots für alle Sprachen (falls nötig)
+- [ ] Performance-Optimierung
+- [ ] Analytics Integration (optional)
+- [ ] Open Graph Tags für Social Sharing
+
+## 📄 License
+
+MIT License - siehe [LICENSE](LICENSE) Datei
+
+## 🤝 Contributing
+
+Contributions sind willkommen! Bitte erstelle einen Issue oder Pull Request.
+
+## 📧 Kontakt
+
+Bei Fragen oder Anregungen: [Issue erstellen](https://github.com/dein-username/icloud-photos-sharing-manual/issues)
+
+---
+
+Made with ❤️ using Next.js and Tailwind CSS
